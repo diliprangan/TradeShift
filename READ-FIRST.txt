@@ -17,9 +17,9 @@ Once the set up is done
 
 1. You can use the run.cmd to run the code or
 2. Use the command line 
-		java -classpath C:\Users\drangan.ORADEV\workspace\TestProject\lib\Geometry.jar com.tradeshift.Test.GeometryTest -dimensions <Dimension Integer > 0 > -sides side1 side2, side3 ...
+		java -classpath C:\Users\drangan.ORADEV\workspace\TradeShift\lib\Geometry.jar com.tradeshift.Test.GeometryTest -dimensions <Dimension Integer > 0 > -sides side1 side2, side3 ...
 	For Example
-		java -classpath C:\Users\drangan.ORADEV\workspace\TestProject\lib\Geometry.jar com.tradeshift.Test.GeometryTest -dimensions 2 -sides 4 4 4 
+		java -classpath C:\Users\drangan.ORADEV\workspace\TradeShift\lib\Geometry.jar com.tradeshift.Test.GeometryTest -dimensions 2 -sides 4 4 4 
 
 About this Project
 
