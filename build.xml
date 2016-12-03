@@ -1,0 +1,62 @@
+<?xml version="1.0"?>
+<project name="Geometric Tests" default="build" basedir=".">
+   <description>Geometric Tests code</description>
+
+   <property environment="OS_ENV"/>
+   <property name="fab.home" value="${OS_ENV.ADE_VIEW_ROOT}/fabuildtools"/>
+   <property name="fab.lib" value="${fab.home}/lib"/>
+
+   <path id="build.classpath">
+      <pathelement path="${fab.home}/validation/bin"/>
+   </path> 
+   <target name="compile" depends="clean">
+      <echo message="Compiling  Geometric Tests"/>
+      <javac debug="true" srcdir="${basedir}/src" destdir="${basedir}/bin">
+         <include name="**/*.java"/>         
+         <classpath refid="build.classpath"/>
+      </javac>
+   </target>
+	
+	<target name="build" depends="compile">
+	      <delete file="${basedir}/lib/Geometry.jar"/>
+	      
+	      <jar destfile="${basedir}/lib/Geometry.jar">
+	         <fileset dir="${basedir}/bin">
+	            <include name="**/*.class"/>
+	            
+	         </fileset>
+	         		 
+	         <!--<fileset dir="${basedir}/security/bin">
+	            <include name="**/*.class"/>
+	            <exclude name="**/.ade_path/**"/>
+	         </fileset>
+	         <fileset dir="${basedir}/c/bin">
+	            <include name="**/*.class"/>
+	            <exclude name="**/.ade_path/**"/>
+	         </fileset>
+	         <fileset dir="${basedir}/c/resource/xsl">
+	            <include name="**/*.xsl"/>
+	            <exclude name="**/.ade_path/**"/>
+	         </fileset>
+	         <fileset dir="${basedir}/db/bin">
+	            <include name="**/*.class"/>
+	            <exclude name="**/.ade_path/**"/>
+	         </fileset>
+	         <fileset dir="${basedir}/security/resource/xsl">
+	            <include name="**/*.xsl"/>
+	            <exclude name="**/.ade_path/**"/>  
+	         </fileset> -->
+	      </jar>
+		  <delete includeemptydirs="true" failonerror="false">
+			<fileset dir="bin" includes="**/*"/>
+		  </delete> 
+	   </target>
+
+   <target name="clean">
+     <delete includeemptydirs="true">
+        <fileset dir="bin" includes="**/*"/>
+     </delete>
+   </target>
+
+</project>
+

@@ -1,0 +1,44 @@
+The code base is available in TradeShift/src directory
+The binary library Geometry.jar is available in TradShift/lib directory
+
+You can choose to build the Geometry.jar if you wish
+
+Software Environment I used
+
+Windows - 10, Java (JDK 1.7.2), Ant (To build the Geometry.jar by yourself)
+
+Download the Source code from Github @ Tradeshift/src. This includes the Geometry.jar too.
+
+The System variables required are 
+
+			1. Path Variable to include the Java installation and Ant installation
+
+Once the set up is done
+
+1. You can use the run.cmd to run the code or
+2. Use the command line 
+		java -classpath C:\Users\drangan.ORADEV\workspace\TestProject\lib\Geometry.jar com.tradeshift.Test.GeometryTest -dimensions <Dimension Integer > 0 > -sides side1 side2, side3 ...
+	For Example
+		java -classpath C:\Users\drangan.ORADEV\workspace\TestProject\lib\Geometry.jar com.tradeshift.Test.GeometryTest -dimensions 2 -sides 4 4 4 
+
+About this Project
+
+Requirement
+	
+	1. Write a program that takes in the sides of a Triangle and responds whetehr the triangle is an Equilateral, Isosceles or Scalene Triangle
+	
+What the Project does
+
+1. The Project first tries to abstract the requirement into an idea to include the entire concept of Geometry as opposed to restricting itself just to validating the Triangle types
+2. The Project behaves more of a platform to evaluate as my many object types and leaves open the opportunity to extend its use to to complex dimensional object with complex validations
+ 
+3. The project tries to read into the data provided and provides information on what kind of an object the data may represent in a 1, 2 or  3 Dimensional space
+   The project perceives the requirement as a subset in a Geometrical universe. Essentially the project responds to input and does not restrict input to just 3 sides  
+
+4. The project takes in 2 sets of parameters
+		a. dimensions - Whether the user is interested in 1-D , 2-D or 3-D. For now we have restricted to 3 dimensions. It is easy to extend the usage to higher dimensions
+		b. The list of sides - You can input as many sides as you want. We have restricted the input of sides of length < 0. We do allow Zero length sides
+		
+
+
+ 
